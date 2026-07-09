@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Routine - Nurul Amin College & University</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ফোন স্ক্রিনে টেবিল সুন্দর দেখানোর জন্য একটি ছোট ইনলাইন CSS রেসপনসিভ ফিক্স -->
+    <style>
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            min-width: 600px; /* ফোন স্ক্রিনে টেবিলকে একদম চ্যাপ্টা হতে দেবে না, স্ক্রল করতে সাহায্য করবে */
+            border-collapse: collapse;
+        }
+        .group-badge, .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            margin: 2px 0;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"> <img src="images/logo (4).png" alt="logo.png"></a>
+        </div>
+
+        <div class="menu-toggle">
+            ☰
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="notice.html">Notice</a>
+            <a href="gallery.html">Location</a>
+            <a href="contact.html">Contact</a>
+            <a href="routine.html" class="active">HSC 2026 Routine</a>
+            <a href="tour.html">Tour info</a>
+            <a href="donation.html">Help others</a>
+            <a href="play.html">play</a>
+            <a href="honours.html">Honours Exam Routine </a>
+            <a href="developre.html">Developer Info </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>HSC Examination Routine 2026</h1>
+        <p class="subtitle">Official Combined Group Routine (Theory: July 02 - August 08)</p>
+
+        <!-- স্থগিত পরীক্ষার নোটিশ অ্যালার্ট -->
+        <div style="background-color: #fff3cd; color: #856404; padding: 15px; margin-bottom: 20px; border-left: 5px solid #ffc107; border-radius: 4px; font-size: 14px;">
+            <strong>⚠️ ব্রেকিং নিউজ (০৯ জুলাই ২০২৬):</strong> বন্যা পরিস্থিতির কারণে চট্টগ্রাম বোর্ডের অধীনস্থ সকল পরীক্ষা স্থগিত করা হয়েছে। তবে ঢাকা বোর্ডসহ অন্যান্য সকল বোর্ডের পরীক্ষা এই নিচের রুটিন অনুযায়ী যথানিয়মে চলবে।
+        </div>
+
+        <!-- এই নতুন table-container ক্লাসটি টেবিলকে ফোনে রেসপনসিভ (স্ক্রলযোগ্য) করবে -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Group</th>
+                        <th>Subject Name</th>
+                        <th>Shift / Time</th>
+                    </tr>
+                </thead>
+                <tbody id="routine-table">
+                    <!-- ১) আবশ্যিক বিষয় (সবার জন্য) -->
+                    <tr>
+                        <td>02/07/2026</td>
+                        <td>Thursday</td>
+                        <td><span class="group-badge all">All</span></td>
+                        <td>Bangla 1st Paper (101)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+                    <tr>
+                        <td>04/07/2026</td>
+                        <td>Saturday</td>
+                        <td><span class="group-badge all">All</span></td>
+                        <td>Bangla 2nd Paper (102)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+                    <tr>
+                        <td>06/07/2026</td>
+                        <td>Monday</td>
+                        <td><span class="group-badge all">All</span></td>
+                        <td>English 1st Paper (107)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+                    <tr>
+                        <td>08/07/2026</td>
+                        <td>Wednesday</td>
+                        <td><span class="group-badge all">All</span></td>
+                        <td>English 2nd Paper (108)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+                    <tr>
+                        <td>11/07/2026</td>
+                        <td>Saturday</td>
+                        <td><span class="group-badge all">All</span></td>
+                        <td>Information & Communication Technology (ICT) (275)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ২) পদার্থবিজ্ঞান, হিসাববিজ্ঞান ও যুক্তিবিদ্যা ১ম পত্র -->
+                    <tr>
+                        <td>13/07/2026</td>
+                        <td>Monday</td>
+                        <td><span class="group-badge science">Science</span><br><span class="group-badge commerce">Commerce</span><br><span class="group-badge arts">Arts</span></td>
+                        <td>Physics 1st Paper (174) <br> Accounting 1st Paper (253) <br> Logic 1st Paper (121)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৩) পদার্থবিজ্ঞান, হিসাববিজ্ঞান ও যুক্তিবিদ্যা ২য় পত্র -->
+                    <tr>
+                        <td>15/07/2026</td>
+                        <td>Wednesday</td>
+                        <td><span class="group-badge science">Science</span><br><span class="group-badge commerce">Commerce</span><br><span class="group-badge arts">Arts</span></td>
+                        <td>Physics 2nd Paper (175) <br> Accounting 2nd Paper (254) <br> Logic 2nd Paper (122)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৪) রসায়ন, ইসলামের ইতিহাস, ইতিহাস, উৎপাদন ব্যবস্থাপনা ১ম পত্র -->
+                    <tr>
+                        <td>19/07/2026</td>
+                        <td>Sunday</td>
+                        <td><span class="group-badge science">Science</span><br><span class="group-badge arts">Arts</span><br><span class="group-badge commerce">Commerce</span></td>
+                        <td>Chemistry 1st Paper (176) <br> Islamic History 1st (267) / History 1st (304) <br> Production Management 1st (286)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৫) রসায়ন, ইসলামের ইতিহাস, ইতিহাস, উৎপাদন ব্যবস্থাপনা ২য় পত্র -->
+                    <tr>
+                        <td>22/07/2026</td>
+                        <td>Wednesday</td>
+                        <td><span class="group-badge science">Science</span><br><span class="group-badge arts">Arts</span><br><span class="group-badge commerce">Commerce</span></td>
+                        <td>Chemistry 2nd Paper (177) <br> Islamic History 2nd (268) / History 2nd (305) <br> Production Management 2nd (287)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৬) পৌরনীতি, জীববিজ্ঞান, ব্যবসায় সংগঠন ১ম পত্র -->
+                    <tr>
+                        <td>27/07/2026</td>
+                        <td>Monday</td>
+                        <td><span class="group-badge arts">Arts</span><br><span class="group-badge science">Science</span><br><span class="group-badge commerce">Commerce</span></td>
+                        <td>Civics & Good Governance 1st (269) <br> Biology 1st Paper (178) <br> Business Org. & Management 1st (277)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৭) পৌরনীতি, জীববিজ্ঞান, ব্যবসায় সংগঠন ২য় পত্র -->
+                    <tr>
+                        <td>29/07/2026</td>
+                        <td>Wednesday</td>
+                        <td><span class="group-badge arts">Arts</span><br><span class="group-badge science">Science</span><br><span class="group-badge commerce">Commerce</span></td>
+                        <td>Civics & Good Governance 2nd (270) <br> Biology 2nd Paper (179) <br> Business Org. & Management 2nd (278)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৮) উচ্চতর গণিত ও ইসলাম শিক্ষা ১ম পত্র -->
+                    <tr>
+                        <td>02/08/2026</td>
+                        <td>Sunday</td>
+                        <td><span class="group-badge science">Science</span><br><span class="group-badge arts">Arts</span></td>
+                        <td>Higher Mathematics 1st (265) <br> Islamic Studies 1st Paper (249)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ৯) উচ্চতর গণিত ও ইসলাম শিক্ষা ২য় পত্র -->
+                    <tr>
+                        <td>04/08/2026</td>
+                        <td>Tuesday</td>
+                        <td><span class="group-badge science">Science</span><br><span class="group-badge arts">Arts</span></td>
+                        <td>Higher Mathematics 2nd (266) <br> Islamic Studies 2nd Paper (250)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ১০) ফিন্যান্স, সমাজবিজ্ঞান, সমাজকর্ম ১ম পত্র -->
+                    <tr>
+                        <td>06/08/2026</td>
+                        <td>Thursday</td>
+                        <td><span class="group-badge commerce">Commerce</span><br><span class="group-badge arts">Arts</span></td>
+                        <td>Finance, Banking & Insurance 1st (292) <br> Sociology 1st (117) / Social Work 1st (251)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+
+                    <!-- ১১) ফিন্যান্স, সমাজবিজ্ঞান, সমাজকর্ম ২য় পত্র -->
+                    <tr>
+                        <td>08/08/2026</td>
+                        <td>Saturday</td>
+                        <td><span class="group-badge commerce">Commerce</span><br><span class="group-badge arts">Arts</span></td>
+                        <td>Finance, Banking & Insurance 2nd (293) <br> Sociology 2nd (118) / Social Work 2nd (252)</td>
+                        <td><span class="badge morning">Morning (10 AM - 1 PM)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ব্যবহারিক পরীক্ষার নোট -->
+        <p style="margin-top: 15px; font-style: italic; color: #555;">* Note: Practical examinations will be held from August 15, 2026.</p>
+    </div>
+
+    <footer>
+        <h2 style="color:#d4af37;">
+            Nurul Amin College & University
+        </h2>
+        <div class="imran" style=" margin-top: 50px;">
+            <h3>Designed & Developed by Ahmed Emran</h3>
+            <ul>
+                <li style=" margin-top: 20px; ">
+                    <a href="mailto:ahmedmdimran180@gmail.com"> Email: ahmedmdimran180@gmail.com Click here</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/8801760038127" target="_blank">WhatsApp Number Click here</a>
+                </li>
+                <li>
+                    <a href="tel:+8801760038127" target="_blank"> Offline Contact Click here</a>
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <li>
+                <a href="https://borhamganjcollege.gov.bd/" target="_blank">
+                    Borhamganj College Website Link Click here
+                </a>
+            </li>
+        </ul>
+        <h3>@Shibchar Madaripur</h3>
+    </footer>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
