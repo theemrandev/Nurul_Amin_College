@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Test artifacts & screenshots
+test/screenshots/
+*.log
+
+# OS metadata
+.DS_Store
+Thumbs.db

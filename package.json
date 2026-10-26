@@ -1,0 +1,19 @@
+{
+  "name": "nurul-amin-degree-college",
+  "version": "2.0.0",
+  "description": "Official website portal of Nurul Amin Degree College (নুরুল আমিন ডিগ্রি কলেজ), Shibchar, Madaripur. EIIN: 110882.",
+  "scripts": {
+    "start": "node test/server.js",
+    "test": "node test/validate.js"
+  },
+  "keywords": [
+    "nurul-amin-degree-college",
+    "shibchar",
+    "madaripur",
+    "eiin-110882",
+    "nu-6309",
+    "college-website"
+  ],
+  "author": "Nurul Amin Degree College & Student Contributors",
+  "license": "MIT"
+}

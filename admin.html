@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrative Portal | প্রশাসনিক পোর্টাল - Nurul Amin Degree College (EIIN: 110882)</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Administrative login and institutional notice management portal for authorized officers of Nurul Amin Degree College, Shibchar, Madaripur.">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-bn">
+
+    <a href="#main-content" class="skip-link">Skip to main content / মূল তথ্যে যান</a>
+
+    <!-- Top Identity Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-meta">
+                <span class="meta-item"><i class="fas fa-id-badge" aria-hidden="true"></i> <strong data-i18n="topbar_eiin">EIIN: ১১০৮৮২</strong></span>
+                <span class="meta-item"><i class="fas fa-university" aria-hidden="true"></i> <strong data-i18n="topbar_code">জাতীয় বিশ্ববিদ্যালয় কোড: ৬৩০৯</strong></span>
+                <span class="meta-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="topbar_location">শিবচর, মাদারীপুর</span></span>
+            </div>
+            <div class="top-bar-actions">
+                <div class="lang-switcher-group" role="group" aria-label="Language selection">
+                    <button type="button" class="lang-toggle-btn active" data-lang="bn" onclick="switchLanguage('bn')" aria-pressed="true">বাংলা</button>
+                    <button type="button" class="lang-toggle-btn" data-lang="en" onclick="switchLanguage('en')" aria-pressed="false">English</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" role="banner">
+        <div class="container header-content">
+            <div class="brand-wrapper">
+                <a href="index.html" class="brand-link">
+                    <img src="images/logo (4).png" alt="নুরুল আমিন ডিগ্রি কলেজ" class="college-logo-img">
+                </a>
+                <div class="brand-titles">
+                    <span class="brand-title-bn">নুরুল আমিন ডিগ্রি কলেজ</span>
+                    <span class="brand-title-en">Nurul Amin Degree College</span>
+                    <span class="brand-subtitle">উমেদপুর, শিবচর, মাদারীপুর • স্থাপিত: ১৯৯৪</span>
+                </div>
+            </div>
+
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-i18n="nav_home">মূলপাতা</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link dropdown-trigger">
+                            <span data-i18n="nav_about">কলেজ পরিচিতি</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="about.html" class="dropdown-link">
+                                    <i class="fas fa-landmark" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_history">ইতিহাস ও পটভূমি</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="gallery.html" class="dropdown-link">
+                                    <i class="fas fa-images" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_gallery">ফটোগ্যালারি</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="play.html" class="dropdown-link">
+                                    <i class="fas fa-futbol" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_sports">ক্রীড়া ও শরীরচর্চা</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="tour.html" class="dropdown-link">
+                                    <i class="fas fa-bus-alt" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_tour">শিক্ষা সফর</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="donation.html" class="dropdown-link">
+                                    <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_welfare">মানবিক উদ্যোগ</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="developer.html" class="dropdown-link">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_credits">প্রজেক্ট পরিচিতি</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="academics.html" class="nav-link dropdown-trigger">
+                            <span data-i18n="nav_academics">শিক্ষা কার্যক্রম</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="academics.html" class="dropdown-link">
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_overview">কোর্স ও বিভাগসমূহ</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="academics.html#degree-pass" class="dropdown-link">
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_degree">স্নাতক (পাস) কোর্স</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="routine.html" class="dropdown-link">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_hsc_routine">পরীক্ষার রুটিন নির্দেশিকা</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="honours.html" class="dropdown-link">
+                                    <i class="fas fa-university" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_nu_routine">জাতীয় বিশ্ববিদ্যালয় তথ্য</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admission.html" class="nav-link" data-i18n="nav_admission">ভর্তি তথ্য</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="student-services.html" class="nav-link" data-i18n="nav_student_services">শিক্ষার্থী সেবা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="notice.html" class="nav-link" data-i18n="nav_notices">নোটিশ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" data-i18n="nav_contact">যোগাযোগ</a>
+                    </li>
+                </ul>
+
+                <div class="header-action-btn">
+                    <a href="admin.html" class="btn-primary" style="padding: 9px 18px; font-size: 0.9rem;">
+                        <i class="fas fa-user-shield" aria-hidden="true"></i>
+                        <span data-i18n="admin_footer_portal_link">অ্যাডমিন পোর্টাল</span>
+                    </a>
+                </div>
+            </nav>
+
+            <button type="button" class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+        <div class="mobile-drawer-header">
+            <div class="brand-titles">
+                <span class="brand-title-bn">নুরুল আমিন ডিগ্রি কলেজ</span>
+                <span class="brand-subtitle">শিবচর, মাদারীপুর</span>
+            </div>
+            <button type="button" class="mobile-close-btn" id="mobile-close" aria-label="Close navigation menu">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="mobile-drawer-body">
+            <ul class="mobile-nav-menu">
+                <li><a href="index.html" class="mobile-nav-link" data-i18n="nav_home">মূলপাতা</a></li>
+                <li class="mobile-has-submenu">
+                    <button type="button" class="mobile-submenu-trigger" aria-expanded="false">
+                        <span data-i18n="nav_about">কলেজ পরিচিতি</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <ul class="mobile-submenu">
+                        <li><a href="about.html" class="mobile-sublink" data-i18n="nav_about_history">ইতিহাস ও পটভূমি</a></li>
+                        <li><a href="gallery.html" class="mobile-sublink" data-i18n="nav_about_gallery">ফটোগ্যালারি</a></li>
+                        <li><a href="play.html" class="mobile-sublink" data-i18n="nav_about_sports">ক্রীড়া ও শরীরচর্চা</a></li>
+                        <li><a href="tour.html" class="mobile-sublink" data-i18n="nav_about_tour">শিক্ষা সফর</a></li>
+                        <li><a href="donation.html" class="mobile-sublink" data-i18n="nav_about_welfare">মানবিক উদ্যোগ</a></li>
+                        <li><a href="developer.html" class="mobile-sublink" data-i18n="nav_about_credits">প্রজেক্ট পরিচিতি</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-has-submenu">
+                    <button type="button" class="mobile-submenu-trigger" aria-expanded="false">
+                        <span data-i18n="nav_academics">শিক্ষা কার্যক্রম</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <ul class="mobile-submenu">
+                        <li><a href="academics.html" class="mobile-sublink" data-i18n="nav_academics_overview">কোর্স ও বিভাগসমূহ</a></li>
+                        <li><a href="academics.html#degree-pass" class="mobile-sublink" data-i18n="nav_academics_degree">স্নাতক (পাস) কোর্স</a></li>
+                        <li><a href="routine.html" class="mobile-sublink" data-i18n="nav_academics_hsc_routine">পরীক্ষার রুটিন নির্দেশিকা</a></li>
+                        <li><a href="honours.html" class="mobile-sublink" data-i18n="nav_academics_nu_routine">জাতীয় বিশ্ববিদ্যালয় তথ্য</a></li>
+                    </ul>
+                </li>
+                <li><a href="admission.html" class="mobile-nav-link" data-i18n="nav_admission">ভর্তি তথ্য</a></li>
+                <li><a href="student-services.html" class="mobile-nav-link" data-i18n="nav_student_services">শিক্ষার্থী সেবা</a></li>
+                <li><a href="notice.html" class="mobile-nav-link" data-i18n="nav_notices">নোটিশ</a></li>
+                <li><a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">যোগাযোগ</a></li>
+                <li><a href="admin.html" class="mobile-nav-link active" data-i18n="admin_footer_portal_link">অ্যাডমিন পোর্টাল</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-nav-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Breadcrumb Bar -->
+        <div class="page-banner" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); color: #ffffff; padding: 36px 0;">
+            <div class="container">
+                <h1 style="font-size: 1.85rem; font-weight: 700; margin-bottom: 8px;" data-i18n="admin_portal_title">প্রশাসনিক পোর্টাল | নুরুল আমিন ডিগ্রি কলেজ</h1>
+                <p style="color: var(--color-accent); font-size: 0.95rem; margin: 0;" data-i18n="admin_dashboard_sub">প্রাতিষ্ঠানিক প্রজ্ঞাপন, একাডেমিক নোটিশ ও ওয়েবসাইটের বিজ্ঞপ্তি পরিচালনা করুন।</p>
+            </div>
+        </div>
+
+        <div id="admin-portal-root" class="container admin-portal-wrapper">
+
+            <!-- STATE 1: Unauthenticated Admin Login Screen -->
+            <div id="admin-login-view">
+                <div class="admin-login-box">
+                    <div class="admin-login-header">
+                        <i class="fas fa-user-shield admin-login-icon" aria-hidden="true"></i>
+                        <h2 style="font-size: 1.35rem; color: var(--color-primary); margin-bottom: 6px;" data-i18n="admin_login_heading">প্রাতিষ্ঠানিক প্রশাসনিক লগইন</h2>
+                        <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin: 0;" data-i18n="admin_login_sub">কলেজের প্রশাসনিক কর্মকর্তা ও নোটিশ পরিচালকদের জন্য সংরক্ষিত প্রবেশদ্বার।</p>
+                    </div>
+
+                    <div id="admin-login-error" class="admin-alert error" style="display: none;" role="alert"></div>
+
+                    <form id="admin-login-form" novalidate>
+                        <div class="admin-form-group" style="margin-bottom: 16px;">
+                            <label for="admin-username" data-i18n="admin_username_label">ব্যবহারকারী নাম</label>
+                            <input type="text" id="admin-username" name="username" required autocomplete="username" placeholder="Username" style="width: 100%;">
+                        </div>
+
+                        <div class="admin-form-group" style="margin-bottom: 20px;">
+                            <label for="admin-password" data-i18n="admin_password_label">পাসওয়ার্ড</label>
+                            <input type="password" id="admin-password" name="password" required autocomplete="current-password" placeholder="Password" style="width: 100%;">
+                        </div>
+
+                        <button type="submit" id="btn-admin-login" class="btn-primary" style="width: 100%; justify-content: center; padding: 11px; font-size: 0.95rem;">
+                            <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                            <span data-i18n="admin_btn_signin">লগইন করুন</span>
+                        </button>
+                    </form>
+
+                    <p style="font-size: 0.78rem; color: var(--color-text-muted); text-align: center; margin-top: 22px; line-height: 1.5;" data-i18n="admin_security_note">
+                        প্রোটোটাইপ নিরাপত্তা সতর্কতা: এই প্রশাসনিক সেশনটি স্থানীয় মূল্যায়নের জন্য ক্লায়েন্ট-সাইড প্রোটোটাইপ দ্বারা পরিচালিত। পাবলিক প্রোডাকশনে প্রকাশের পূর্বে সল্টেড হ্যাশ ও নিরাপদ এইচটিটিপি কুকি সম্বলিত ব্যাকএন্ড প্রমাণীকরণ বাধ্যতামূলক।
+                    </p>
+                </div>
+            </div>
+
+            <!-- STATE 2: Authenticated Admin Dashboard -->
+            <div id="admin-dashboard-view" style="display: none;">
+                <!-- Dashboard Top Control Bar -->
+                <div class="admin-dashboard-bar">
+                    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                        <span class="admin-user-pill">
+                            <i class="fas fa-user-check" style="color: var(--color-accent);" aria-hidden="true"></i>
+                            <span data-i18n="admin_logged_in_as">লগইনকৃত:</span>
+                            <strong style="color: var(--color-primary);">theemrandev</strong>
+                        </span>
+                        <span class="source-badge badge-direct" style="font-size: 0.78rem;">Super Administrator</span>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                        <a href="notice.html" target="_blank" rel="noopener noreferrer" class="notice-filter-btn" style="padding: 7px 14px; font-size: 0.85rem;">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            <span data-i18n="admin_public_view">পাবলিক নোটিশ বোর্ড দেখুন</span>
+                        </a>
+                        <button type="button" id="btn-admin-logout" class="notice-filter-btn" style="padding: 7px 14px; font-size: 0.85rem; color: #b91c1c; border-color: #fca5a5;">
+                            <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                            <span data-i18n="admin_btn_signout">লগআউট</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Statistics Metrics -->
+                <div class="admin-stat-cards">
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-lbl" data-i18n="admin_stat_total_notices">মোট সক্রিয় নোটিশ</div>
+                        <div id="admin-stat-total-val" class="admin-stat-val">0</div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-lbl" data-i18n="admin_stat_admin_notices">অ্যাডমিন প্রণীত নোটিশ</div>
+                        <div id="admin-stat-admin-val" class="admin-stat-val" style="color: var(--color-accent);">0</div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-lbl" data-i18n="admin_stat_nu_status">এনইউ লাইভ ফিড অবস্থা</div>
+                        <div id="admin-stat-nu-val" class="admin-stat-val" style="font-size: 1.15rem; color: #065f46;">সক্রিয় (লাইভ)</div>
+                    </div>
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-lbl" data-i18n="admin_stat_storage">স্টোরেজ ইঞ্জিন</div>
+                        <div class="admin-stat-val" style="font-size: 1.05rem; color: #1e40af;" data-i18n="admin_stat_storage_val">LocalStorage (Persistent)</div>
+                    </div>
+                </div>
+
+                <!-- Notice Management Form Card (Create & Edit) -->
+                <div class="admin-card" id="admin-notice-form-card">
+                    <div class="admin-card-header">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-edit" style="color: var(--color-accent); font-size: 1.2rem;" aria-hidden="true"></i>
+                            <h3 id="admin-form-heading" style="margin: 0; color: var(--color-primary); font-size: 1.15rem;" data-i18n="admin_form_heading_create">নতুন প্রাতিষ্ঠানিক নোটিশ প্রকাশ করুন</h3>
+                        </div>
+                    </div>
+
+                    <div id="admin-form-alert" class="admin-alert info" style="display: none;" role="alert"></div>
+
+                    <form id="admin-manage-notice-form">
+                        <input type="hidden" id="admin-notice-edit-id">
+
+                        <div class="admin-form-grid">
+                            <div class="admin-form-group">
+                                <label for="admin-input-title-bn" data-i18n="admin_form_title_bn">নোটিশের শিরোনাম (বাংলা) *</label>
+                                <input type="text" id="admin-input-title-bn" required placeholder="উদাঃ একাদশ শ্রেণির বিশেষ সেমিস্টার পরীক্ষার রুটিন">
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label for="admin-input-title-en" data-i18n="admin_form_title_en">Notice Title (English) *</label>
+                                <input type="text" id="admin-input-title-en" required placeholder="e.g. Schedule of XI Class Special Semester Examination">
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label for="admin-input-category" data-i18n="admin_form_category">ক্যাটাগরি</label>
+                                <select id="admin-input-category">
+                                    <option value="general" selected>সাধারণ / General</option>
+                                    <option value="exam">পরীক্ষা / Examination</option>
+                                    <option value="routine">রুটিন / Routine</option>
+                                    <option value="admission">ভর্তি / Admission</option>
+                                    <option value="achievement">অর্জন ও সাফল্য / Achievement</option>
+                                </select>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label for="admin-input-date" data-i18n="admin_form_date">প্রকাশের তারিখ</label>
+                                <input type="date" id="admin-input-date" required>
+                            </div>
+
+                            <div class="admin-form-group" style="grid-column: 1 / -1;">
+                                <label for="admin-input-summary-bn" data-i18n="admin_form_summary_bn">নোটিশের সারসংক্ষেপ (বাংলা) *</label>
+                                <textarea id="admin-input-summary-bn" rows="2" required placeholder="শিক্ষার্থীদের জন্য সংক্ষিপ্ত নির্দেশনা ও বিবরণ..."></textarea>
+                            </div>
+
+                            <div class="admin-form-group" style="grid-column: 1 / -1;">
+                                <label for="admin-input-summary-en" data-i18n="admin_form_summary_en">Notice Summary (English) *</label>
+                                <textarea id="admin-input-summary-en" rows="2" required placeholder="Brief instructions and detailed circular summary for students..."></textarea>
+                            </div>
+
+                            <div class="admin-form-group" style="grid-column: 1 / -1;">
+                                <label for="admin-input-link" data-i18n="admin_form_link">সার্কুলার লিংক বা পিডিএফ (ঐচ্ছিক)</label>
+                                <input type="text" id="admin-input-link" placeholder="routine.html বা অনলাইন পিডিএফ লিংক (যেমন: https://...)">
+                            </div>
+
+                            <div class="admin-form-group" style="grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 8px;">
+                                <input type="checkbox" id="admin-input-featured" style="width: auto; margin: 0; cursor: pointer;">
+                                <label for="admin-input-featured" style="cursor: pointer; margin: 0; font-weight: normal;" data-i18n="admin_form_featured_label">এই নোটিশটি মূলপাতায় হাইলাইট (Featured) হিসেবে প্রদর্শন করুন</label>
+                            </div>
+                        </div>
+
+                        <div class="admin-form-actions">
+                            <button type="submit" id="admin-btn-submit-notice" class="btn-primary" style="padding: 9px 20px;">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                <span data-i18n="admin_btn_save">সংরক্ষণ ও প্রকাশ করুন</span>
+                            </button>
+                            <button type="button" id="admin-btn-cancel-edit" class="notice-filter-btn" style="padding: 9px 18px; display: none;">
+                                <i class="fas fa-times" aria-hidden="true"></i>
+                                <span data-i18n="admin_btn_cancel">বাতিল করুন</span>
+                            </button>
+                            <button type="button" id="admin-btn-reset-form" class="notice-filter-btn" style="padding: 9px 18px;">
+                                <i class="fas fa-undo" aria-hidden="true"></i>
+                                <span data-i18n="admin_btn_reset">ফর্ম খালি করুন</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Admin Notices Table Card -->
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-list-alt" style="color: var(--color-primary); font-size: 1.2rem;" aria-hidden="true"></i>
+                            <h3 style="margin: 0; color: var(--color-primary); font-size: 1.15rem;" data-i18n="admin_table_heading">স্থানীয়ভাবে পরিচালিত নোটিশ তালিকা</h3>
+                        </div>
+                        <div>
+                            <input type="text" id="admin-filter-input" placeholder="অ্যাডমিন নোটিশ খুঁজুন..." data-i18n-placeholder="admin_table_search_placeholder" style="padding: 6px 12px; font-size: 0.86rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); min-width: 220px;">
+                        </div>
+                    </div>
+
+                    <div class="admin-table-wrap">
+                        <table class="admin-table" aria-label="Admin Managed Notices">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 140px;" data-i18n="admin_table_col_id">আইডি</th>
+                                    <th scope="col" data-i18n="admin_table_col_title">শিরোনাম ও সারসংক্ষেপ</th>
+                                    <th scope="col" style="width: 110px;" data-i18n="admin_table_col_category">ক্যাটাগরি</th>
+                                    <th scope="col" style="width: 110px;" data-i18n="admin_table_col_date">তারিখ</th>
+                                    <th scope="col" style="width: 170px;" data-i18n="admin_table_col_actions">অ্যাকশন</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-notices-table-body">
+                                <!-- Populated dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="admin-empty-state" class="admin-empty-state" style="display: none;">
+                        <i class="fas fa-folder-open admin-empty-icon" aria-hidden="true"></i>
+                        <h4 style="color: var(--color-primary); margin-bottom: 6px;" data-i18n="admin_empty_title">কোনো অ্যাডমিন নোটিশ নেই</h4>
+                        <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin: 0;" data-i18n="admin_empty_desc">এখনও কোনো কাস্টম নোটিশ তৈরি করা হয়নি। নতুন নোটিশ প্রকাশ করতে উপরের ফর্মটি ব্যবহার করুন।</p>
+                    </div>
+                </div>
+
+                <!-- Reference: Baseline Default System Notices (Read-Only) -->
+                <div style="background: var(--color-surface-muted); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 20px 24px;">
+                    <h4 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-info-circle" style="color: var(--color-accent);" aria-hidden="true"></i>
+                        <span data-i18n="admin_defaults_heading">সিস্টেম ডিফল্ট নোটিশসমূহ (শুধুমাত্র পাঠযোগ্য)</span>
+                    </h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0 0 12px 0;" data-i18n="admin_defaults_desc">
+                        এই প্রাথমিক রেকর্ডসমূহ js/data.js ফাইলে কনফিগার করা রয়েছে এবং এগুলো আপনার প্রণীত কাস্টম নোটিশের পাশাপাশি প্রদর্শিত হয়।
+                    </p>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <span class="source-badge badge-official">notice-01: প্রাতিষ্ঠানিক একাডেমিক নির্দেশনা</span>
+                        <span class="source-badge badge-official">notice-02: একাদশ শ্রেণিতে কেন্দ্রীয় ভর্তি নির্দেশিকা</span>
+                        <span class="source-badge badge-official">notice-03: জাতীয় বিশ্ববিদ্যালয় ডিগ্রি পাস তথ্য</span>
+                        <span class="source-badge badge-official">notice-04: ঢাকা বিশ্ববিদ্যালয়ে মেধাবী শিক্ষার্থীর ভর্তি</span>
+                        <span class="source-badge badge-official">notice-05: দাপ্তরিক অফিস সময়সূচি ও বন্ধ</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-content">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-brand">
+                    <div class="footer-brand">
+                        <img src="images/logo (4).png" alt="নুরুল আমিন ডিগ্রি কলেজ" class="footer-logo">
+                        <div class="footer-brand-text">
+                            <span class="footer-title-bn">নুরুল আমিন ডিগ্রি কলেজ</span>
+                            <span class="footer-title-en">Nurul Amin Degree College</span>
+                            <span class="footer-subtitle">উমেদপুর, শিবচর, মাদারীপুর</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc" data-i18n="footer_desc">
+                        মাদারীপুর জেলার শিবচর উপজেলার একটি ঐতিহ্যবাহী শিক্ষাপ্রতিষ্ঠান। ১৯৯৪ সাল থেকে উচ্চমাধ্যমিক ও ডিগ্রি স্তরে গুণগত শিক্ষা নিশ্চিতকরণে অঙ্গীকারবদ্ধ।
+                    </p>
+                    <div class="footer-meta-pills">
+                        <span class="footer-meta-pill">EIIN: 110882</span>
+                        <span class="footer-meta-pill">NU Code: 6309</span>
+                        <span class="footer-meta-pill">MPO: 3504013201</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_links">প্রয়োজনীয় লিংক</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav_home">মূলপাতা</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">কলেজ পরিচিতি</a></li>
+                        <li><a href="academics.html" data-i18n="nav_academics">শিক্ষা কার্যক্রম</a></li>
+                        <li><a href="admission.html" data-i18n="nav_admission">ভর্তি নির্দেশিকা</a></li>
+                        <li><a href="student-services.html" data-i18n="nav_student_services">শিক্ষার্থী সেবা পোর্টাল</a></li>
+                        <li><a href="notice.html" data-i18n="nav_notices">নোটিশ বোর্ড</a></li>
+                        <li><a href="routine.html" data-i18n="nav_academics_hsc_routine">পরীক্ষার রুটিন নির্দেশিকা</a></li>
+                        <li><a href="gallery.html" data-i18n="nav_about_gallery">ফটোগ্যালারি</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_authorities">সরকারি শিক্ষা পোর্টাল</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://www.shed.gov.bd/" target="_blank" rel="noopener noreferrer">মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ</a></li>
+                        <li><a href="https://dhakaeducationboard.gov.bd/" target="_blank" rel="noopener noreferrer">ঢাকা শিক্ষা বোর্ড</a></li>
+                        <li><a href="http://www.nu.ac.bd/" target="_blank" rel="noopener noreferrer">জাতীয় বিশ্ববিদ্যালয়</a></li>
+                        <li><a href="http://www.xiclassadmission.gov.bd/" target="_blank" rel="noopener noreferrer">একাদশ শ্রেণিতে ভর্তি পোর্টাল</a></li>
+                        <li><a href="http://www.banbeis.gov.bd/" target="_blank" rel="noopener noreferrer">ব্যানবেইস (BANBEIS)</a></li>
+                        <li><a href="http://shibchar.madaripur.gov.bd/" target="_blank" rel="noopener noreferrer">শিবচর উপজেলা পোর্টাল</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_address_title">ক্যাম্পাসের ঠিকানা</h4>
+                    <address style="font-style: normal; font-size: 0.9rem; line-height: 1.6; color: #94a3b8;">
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-right: 6px;"></i> <span data-i18n="footer_address">উমেদপুর, শিবচর, মাদারীপুর - ৭৯৩৩</span></p>
+                        <p style="margin-top: 8px;"><i class="fas fa-building" style="color: var(--color-accent); margin-right: 6px;"></i> <span data-i18n="footer_admin_building">প্রশাসনিক ভবন, কলেজ ক্যাম্পাস</span></p>
+                        <p style="margin-top: 8px;"><i class="fas fa-clock" style="color: var(--color-accent); margin-right: 6px;"></i> <span data-i18n="footer_office_hours">রবিবার - বৃহস্পতিবার (সকাল ৯টা - বিকাল ৪টা)</span></p>
+                        <p style="margin-top: 10px; font-size: 0.8rem; color: #cbd5e1;">
+                            <a href="contact.html" style="color: var(--color-accent); text-decoration: underline;"><i class="fas fa-arrow-right"></i> যোগাযোগ ও তথ্য যাচাইকরণ</a>
+                        </p>
+                        <p style="margin-top: 8px; font-size: 0.8rem; color: #cbd5e1;">
+                            <a href="admin.html" style="color: var(--color-accent); text-decoration: underline;"><i class="fas fa-user-shield"></i> <span data-i18n="admin_footer_portal_link">অ্যাডমিন পোর্টাল</span></a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <div data-i18n="footer_copyright">
+                    © ২০২৬ নুরুল আমিন ডিগ্রি কলেজ, শিবচর, মাদারীপুর। সর্বস্বত্ব সংরক্ষিত।
+                </div>
+                <div class="footer-credit">
+                    <span data-i18n="footer_credit_label">মূল ডেমো উদ্যোগ ও ডেভেলপমেন্ট:</span> 
+                    <a href="developer.html">আহমেদ ইমরান (এইচএসসি ব্যাচ ২০২৫)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

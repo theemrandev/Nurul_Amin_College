@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /test/
+Disallow: /scripts/
+Disallow: /data/
+
+Sitemap: https://nurulamindegreecollege.edu.bd/sitemap.xml

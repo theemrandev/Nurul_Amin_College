@@ -1,170 +1,550 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | ক্যাম্পাস ফটোগ্যালারি - Nurul Amin Degree College (NAC)</title>
+    <meta name="description" content="Authentic campus photography, academic buildings, sports events, study tours, and student life at Nurul Amin Degree College (NAC), Shibchar, Madaripur.">
+    <meta name="keywords" content="Nurul Amin Degree College campus photos, Shibchar college gallery, academic buildings, sports events, Nurul Amin Degree College NAC">
+    <link rel="canonical" href="https://nurulamindegreecollege.edu.bd/gallery.html">
 
-    <title>Gallery - Nurul Amin College & University</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Photo Gallery | ক্যাম্পাস ফটোগ্যালারি - Nurul Amin Degree College (NAC)">
+    <meta property="og:description" content="Authentic campus photography, academic buildings, sports events, and student life at Nurul Amin Degree College (NAC).">
+    <meta property="og:url" content="https://nurulamindegreecollege.edu.bd/gallery.html">
+    <meta property="og:image" content="https://nurulamindegreecollege.edu.bd/images/clg1.jpg">
+    <meta property="og:site_name" content="Nurul Amin Degree College (NAC)">
 
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo Gallery | ক্যাম্পাস ফটোগ্যালারি - Nurul Amin Degree College (NAC)">
+    <meta name="twitter:description" content="Authentic campus photography, academic buildings, sports events, and student life at Nurul Amin Degree College (NAC).">
+    <meta name="twitter:image" content="https://nurulamindegreecollege.edu.bd/images/clg1.jpg">
+
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nurulamindegreecollege.edu.bd/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Photo Gallery",
+          "item": "https://nurulamindegreecollege.edu.bd/gallery.html"
+        }
+      ]
+    }
+    </script>
+    <style>
+        .gallery-filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+        .gallery-filter-btn {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .gallery-filter-btn.active, .gallery-filter-btn:hover {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: #ffffff;
+        }
+    </style>
 </head>
+<body class="font-bn">
 
-<body>
+    <a href="#main-content" class="skip-link">Skip to main content / মূল তথ্যে যান</a>
 
-    <header>
-        <div class="logo">
-            <a href="index.html"> <img src="images/logo (4).png" alt="logo.png"></a>
+    <!-- Top Identity Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-meta">
+                <span class="meta-item"><i class="fas fa-id-badge" aria-hidden="true"></i> <strong data-i18n="topbar_eiin">EIIN: ১১০৮৮২</strong></span>
+                <span class="meta-item"><i class="fas fa-university" aria-hidden="true"></i> <strong data-i18n="topbar_code">জাতীয় বিশ্ববিদ্যালয় কোড: ৬৩০৯</strong></span>
+                <span class="meta-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="topbar_location">শিবচর, মাদারীপুর</span></span>
+            </div>
+            <div class="top-bar-actions">
+                <div class="lang-switcher-group" role="group" aria-label="Language selection">
+                    <button type="button" class="lang-toggle-btn active" data-lang="bn" onclick="switchLanguage('bn')" aria-pressed="true">বাংলা</button>
+                    <button type="button" class="lang-toggle-btn" data-lang="en" onclick="switchLanguage('en')" aria-pressed="false">English</button>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="menu-toggle">
-            ☰
+    <!-- Header -->
+    <header class="main-header" role="banner">
+        <div class="container header-content">
+            <div class="brand-wrapper">
+                <a href="index.html" class="brand-link">
+                    <img src="images/logo (4).png" alt="নুরুল আমিন ডিগ্রি কলেজ" class="college-logo-img">
+                </a>
+                <div class="brand-titles">
+                    <span class="brand-title-bn">নুরুল আমিন ডিগ্রি কলেজ</span>
+                    <span class="brand-title-en">Nurul Amin Degree College</span>
+                    <span class="brand-subtitle">উমেদপুর, শিবচর, মাদারীপুর • স্থাপিত: ১৯৯৪</span>
+                </div>
+            </div>
+
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" data-i18n="nav_home">মূলপাতা</a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link dropdown-trigger">
+                            <span data-i18n="nav_about">কলেজ পরিচিতি</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="about.html" class="dropdown-link">
+                                    <i class="fas fa-landmark" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_history">ইতিহাস ও পটভূমি</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="gallery.html" class="dropdown-link">
+                                    <i class="fas fa-images" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_gallery">ক্যাম্পাস ফটোগ্যালারি</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="play.html" class="dropdown-link">
+                                    <i class="fas fa-futbol" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_sports">ক্রীড়া ও অ্যাথলেটিকস</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="tour.html" class="dropdown-link">
+                                    <i class="fas fa-bus-alt" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_tour">শিক্ষা সফরের স্মৃতি</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="donation.html" class="dropdown-link">
+                                    <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_welfare">মানবসেবা ও সামাজিক কাজ</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="developer.html" class="dropdown-link">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                    <span data-i18n="nav_about_credits">প্রজেক্ট পরিচিতি ও কৃতিত্ব</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="academics.html" class="nav-link dropdown-trigger">
+                            <span data-i18n="nav_academics">শিক্ষা কার্যক্রম</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="academics.html" class="dropdown-link">
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_overview">কোর্স ও বিভাগসমূহ</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="academics.html#hsc" class="dropdown-link">
+                                    <i class="fas fa-book-reader" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_hsc">এইচএসসি পাঠ্যক্রম</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="academics.html#degree" class="dropdown-link">
+                                    <i class="fas fa-university" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_degree">ডিগ্রি (পাস) কোর্সসমূহ</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="routine.html" class="dropdown-link">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_hsc_routine">এইচএসসি পরীক্ষার রুটিন</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="honours.html" class="dropdown-link">
+                                    <i class="fas fa-scroll" aria-hidden="true"></i>
+                                    <span data-i18n="nav_academics_nu_routine">জাতীয় বিশ্ববিদ্যালয় পরীক্ষার রুটিন</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admission.html" class="nav-link" data-i18n="nav_admission">ভর্তি তথ্য</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="student-services.html" class="nav-link" data-i18n="nav_student_services">শিক্ষার্থী সেবা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="notice.html" class="nav-link" data-i18n="nav_notices">নোটিশ বোর্ড</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" data-i18n="nav_contact">যোগাযোগ</a>
+                    </li>
+                </ul>
+                <a href="admission.html" class="btn-header-cta">
+                    <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                    <span data-i18n="apply_btn">অনলাইনে ভর্তি</span>
+                </a>
+            </nav>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
+                </span>
+            </button>
         </div>
-
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="notice.html">Notice</a>
-            <a href="gallery.html">Location</a>
-            <a href="contact.html" class="active">Contact</a>
-            <a href="routine.html">HSC 2026 Routine</a>
-            <a href="tour.html">Tour info</a>
-            <a href="donation.html">Help others</a>
-            <a href="play.html">play</a>
-            <a href="honours.html">Honours Exam Routine </a>
-            <a href="developre.html">Developre Info </a>
-
-
-
-
-
-        </nav>
     </header>
-    <section class="location-section">
-        <h2 class="border"> Our Location</h2>
-        <p>Visit Nurul Amin College and University and explore our beautiful campus.</p>
 
-        <div class="map-box">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.6758250952175!2d90.20615758002833!3d23.327517824714068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37557700678d6161%3A0x74243955a050560c!2sNurul%20Amin%20University%20College!5e0!3m2!1sen!2sbd!4v1781670305374!5m2!1sen!2sbd"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav-overlay" aria-hidden="true"></div>
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/logo (4).png" alt="মনোগ্রাম" style="width: 34px; height: 34px; object-fit: contain;">
+                <span class="brand-title-bn" style="font-size: 1rem;">নুরুল আমিন ডিগ্রি কলেজ</span>
+            </div>
+            <button type="button" class="mobile-nav-close" aria-label="Close navigation">&times;</button>
         </div>
-
-
-
-        <div class="gallerys">
-
-            <h2>Our Location</h2>
-
-            <p>
-                Nurul Amin College and University is situated in a peaceful, accessible, and student-friendly
-                environment that provides an ideal setting for academic excellence and personal development. The campus
-                enjoys a strategic location that allows students from different areas to reach the institution
-                conveniently. Surrounded by open spaces and a refreshing atmosphere, the campus offers an inspiring
-                environment where learning, creativity, and community engagement flourish.
-            </p>
-
-            <p>
-                The location of the institution reflects its commitment to providing a balanced educational experience.
-                Away from excessive noise and congestion, the campus creates a calm and secure environment that helps
-                students concentrate on their studies while also participating in various cultural, social, and
-                recreational activities. The natural surroundings and open spaces contribute to a positive and healthy
-                learning atmosphere.
-            </p>
-
-            <p>
-                Visitors, parents, and prospective students can easily locate the institution through the map provided
-                below. The campus remains well-connected and easily accessible, making it a welcoming destination for
-                education, innovation, and lifelong learning.
-            </p>
-
-            <p>
-                At Nurul Amin College and University, our location is more than a geographical position—it is a place
-                where aspirations take shape, talents are discovered, and students are empowered to build a brighter
-                future through knowledge, discipline, and excellence.
-            </p>
-
-        </div>
-
-
-    </section>
-
-    <!-- GALLERY SECTION -->
-    <section class="section">
-
-        <h2 class="title">Campus Gallery</h2>
-
-        <div class="gallerys">
-
-            <img src="images/clg1.jpeg" alt="Campus Image 1">
-            <img src="images/bisty.jpg" alt="Campus Image 2">
-            <img src="images/clg1.jpg" alt="College Building">
-
-
-            <p> A panoramic view of the college playground, providing students with a spacious and refreshing
-                environment for sports and recreational activities.</p>
-
-            <p>The campus field serves as a vibrant gathering place where students participate in football matches,
-                outdoor events, and various co-curricular activities.</p>
-
-            <p>The green open field reflects the institution's commitment to promoting physical fitness, teamwork, and a
-                healthy campus lifestyle.</p>
-
-        </div>
-
-
-
-
-    </section>
-
-    <footer>
-
-        <h2 style="color:#d4af37;">
-            Nurul Amin College & University
-        </h2>
-        <div class="imran" style=" margin-top: 50px;">
-            <h3>
-
-                Designed & Developed by Ahmed Emran
-
-            </h3>
-
-
-             <ul>
-                <li style=" margin-top: 20px; ">
-                    <a href="mailto:ahmedmdimran180@gmail.com"> Email: ahmedmdimran180@gmail.com Click here</a>
-                </li>
-
-
-                <li>
-                    <a href="https://wa.me/8801760038127" target="_blank">What'sApp
-                        Number Cilik here</a>
-                </li>
-                <li>
-                    <a href=" tel:+8801760038127" target="_blank"> Offline Contact Click here</a>
-                </li>
+        <ul class="mobile-nav-links">
+            <li class="mobile-nav-item">
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">মূলপাতা</a>
+            </li>
+            <li class="mobile-nav-item has-mobile-dropdown">
+                <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+                    <span data-i18n="nav_about">কলেজ পরিচিতি</span>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <ul class="mobile-submenu">
+                    <li><a href="about.html" class="mobile-submenu-link" data-i18n="nav_about_history">ইতিহাস ও পটভূমি</a></li>
+                    <li><a href="gallery.html" class="mobile-submenu-link" data-i18n="nav_about_gallery">ক্যাম্পাস ফটোগ্যালারি</a></li>
+                    <li><a href="play.html" class="mobile-submenu-link" data-i18n="nav_about_sports">ক্রীড়া ও অ্যাথলেটিকস</a></li>
+                    <li><a href="tour.html" class="mobile-submenu-link" data-i18n="nav_about_tour">শিক্ষা সফরের স্মৃতি</a></li>
+                    <li><a href="donation.html" class="mobile-submenu-link" data-i18n="nav_about_welfare">মানবসেবা ও সামাজিক কাজ</a></li>
+                    <li><a href="developer.html" class="mobile-submenu-link" data-i18n="nav_about_credits">প্রজেক্ট পরিচিতি ও কৃতিত্ব</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item has-mobile-dropdown">
+                <button type="button" class="mobile-nav-link mobile-dropdown-btn" aria-expanded="false">
+                    <span data-i18n="nav_academics">শিক্ষা কার্যক্রম</span>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <ul class="mobile-submenu">
+                    <li><a href="academics.html" class="mobile-submenu-link" data-i18n="nav_academics_overview">কোর্স ও বিভাগসমূহ</a></li>
+                    <li><a href="academics.html#hsc" class="mobile-submenu-link" data-i18n="nav_academics_hsc">এইচএসসি পাঠ্যক্রম</a></li>
+                    <li><a href="academics.html#degree" class="mobile-submenu-link" data-i18n="nav_academics_degree">ডিগ্রি (পাস) কোর্সসমূহ</a></li>
+                    <li><a href="routine.html" class="mobile-submenu-link" data-i18n="nav_academics_hsc_routine">এইচএসসি পরীক্ষার রুটিন</a></li>
+                    <li><a href="honours.html" class="mobile-submenu-link" data-i18n="nav_academics_nu_routine">জাতীয় বিশ্ববিদ্যালয় পরীক্ষার রুটিন</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="admission.html" class="mobile-nav-link" data-i18n="nav_admission">ভর্তি তথ্য</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="student-services.html" class="mobile-nav-link" data-i18n="nav_student_services">শিক্ষার্থী সেবা</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="notice.html" class="mobile-nav-link" data-i18n="nav_notices">নোটিশ বোর্ড</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">যোগাযোগ</a>
+            </li>
         </ul>
-
+        <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid var(--color-border);">
+            <div class="lang-switcher-group" style="width: 100%; justify-content: center; display: flex;" role="group" aria-label="Language selection">
+                <button type="button" class="lang-toggle-btn active" data-lang="bn" onclick="switchLanguage('bn')">বাংলা</button>
+                <button type="button" class="lang-toggle-btn" data-lang="en" onclick="switchLanguage('en')">English</button>
+            </div>
         </div>
-            <ul>
+    </div>
 
-        <li>
-            <a href="https://borhamganjcollege.gov.bd/" target="_blank">
-                borhamganj College of link website link Click here
+    <!-- Page Banner -->
+    <div class="page-banner">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html" data-i18n="nav_home">মূলপাতা</a></li>
+                <li>/</li>
+                <li data-i18n="nav_gallery">ফটোগ্যালারি</li>
+            </ul>
+            <h1 class="page-title">ক্যাম্পাস জীবন ও ফটোগ্যালারি</h1>
+        </div>
+    </div>
 
-            </a>
-        </li>
-        </ul>
-        <h3>@Shibchar Madaripur</h3>
+    <main id="main-content">
+        <section class="site-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">ছবিতে আমাদের ক্যাম্পাস</span>
+                    <h2 class="section-title">ক্যাম্পাসের জীবন্ত স্মৃতি ও কার্যক্রম</h2>
+                    <p class="section-desc">শিক্ষার্থীদের ধারণকৃত আসল আলোকচিত্রের মাধ্যমে আমাদের প্রিয় বিদ্যাপীঠের ক্যাম্পাস পরিবেশ।</p>
+                </div>
 
+                <!-- Gallery Categories Filter -->
+                <div class="gallery-filter-bar" role="tablist">
+                    <button type="button" class="gallery-filter-btn active" onclick="filterGallery('all')">সকল ছবি (All Photos)</button>
+                    <button type="button" class="gallery-filter-btn" onclick="filterGallery('campus')">ক্যাম্পাস ও ভবন (Campus)</button>
+                    <button type="button" class="gallery-filter-btn" onclick="filterGallery('sports')">খেলার মাঠ ও ক্রীড়া (Sports)</button>
+                    <button type="button" class="gallery-filter-btn" onclick="filterGallery('events')">শিক্ষা সফর ও কার্যক্রম (Events)</button>
+                    <button type="button" class="gallery-filter-btn" onclick="filterGallery('nature')">প্রকৃতি ও শহীদ মিনার (Nature)</button>
+                </div>
+
+                <!-- Photo Grid -->
+                <div class="gallery-grid">
+                    <!-- Campus 1 -->
+                    <div class="gallery-grid-item" data-category="campus">
+                        <img src="images/clg1.jpg" alt="নুরুল আমিন ডিগ্রি কলেজ মূল ভবন" loading="lazy">
+                        <div class="gallery-overlay-badge">কলেজ মূল একাডেমিক ভবন</div>
+                    </div>
+
+                    <!-- Campus 2 -->
+                    <div class="gallery-grid-item" data-category="campus">
+                        <img src="images/clg1.jpeg" alt="কলেজ ক্যাম্পাস ভবন ও সামনের আঙিনা" loading="lazy">
+                        <div class="gallery-overlay-badge">ক্যাম্পাস ভবন ও প্রাঙ্গণ</div>
+                    </div>
+
+                    <!-- Campus Road -->
+                    <div class="gallery-grid-item" data-category="campus">
+                        <img src="images/road.jpg" alt="কলেজ ক্যাম্পাসে প্রবেশের মনোরম সড়ক" loading="lazy">
+                        <div class="gallery-overlay-badge">ক্যাম্পাস প্রবেশ সড়ক</div>
+                    </div>
+
+                    <!-- Sports 1 -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/math (1).jpg" alt="বিশাল খেলার মাঠের দৃশ্য" loading="lazy">
+                        <div class="gallery-overlay-badge">সবুজ খেলার মাঠ</div>
+                    </div>
+
+                    <!-- Sports 2 -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/math (2).jpg" alt="খেলার মাঠের উন্মুক্ত প্রান্তর" loading="lazy">
+                        <div class="gallery-overlay-badge">খেলার মাঠের বিস্তৃত প্রান্তর</div>
+                    </div>
+
+                    <!-- Sports 3 -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/math (3).jpg" alt="ক্যাম্পাস মাঠের মনোরম দৃশ্য" loading="lazy">
+                        <div class="gallery-overlay-badge">ক্যাম্পাস মাঠ ও প্রকৃতি</div>
+                    </div>
+
+                    <!-- Sports 4 -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/math (4).jpg" alt="মাঠের চারপাশের সবুজ পরিবেশ" loading="lazy">
+                        <div class="gallery-overlay-badge">মাঠ সংলগ্ন সবুজ ছায়াঘেরা পরিবেশ</div>
+                    </div>
+
+                    <!-- Sports Team -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/1000106354.jpg" alt="কলেজ ফুটবল দল ও শিক্ষার্থীদের গ্রুপ ছবি" loading="lazy">
+                        <div class="gallery-overlay-badge">কলেজ ফুটবল দল ও শিক্ষার্থী একতা</div>
+                    </div>
+
+                    <!-- Sports Activity -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/1000106346.jpg" alt="ফুটবল খেলা উপভোগ করছেন শিক্ষক ও শিক্ষার্থীরা" loading="lazy">
+                        <div class="gallery-overlay-badge">খেলা উপভোগের আনন্দময় মুহূর্ত</div>
+                    </div>
+
+                    <!-- Faculty in Sports -->
+                    <div class="gallery-grid-item" data-category="sports">
+                        <img src="images/sirs.jpg" alt="মাঠে উপস্থিত শ্রদ্ধেয় শিক্ষকবৃন্দ" loading="lazy">
+                        <div class="gallery-overlay-badge">শিক্ষার্থীদের খেলায় শিক্ষকদের উপস্থিতি</div>
+                    </div>
+
+                    <!-- Shahid Minar -->
+                    <div class="gallery-grid-item" data-category="nature">
+                        <img src="images/minar.jpg" alt="ক্যাম্পাস চত্বরে নির্মিত শহীদ মিনার" loading="lazy">
+                        <div class="gallery-overlay-badge">মর্যাদাপূর্ণ ক্যাম্পাস শহীদ মিনার</div>
+                    </div>
+
+                    <!-- Greenery 1 -->
+                    <div class="gallery-grid-item" data-category="nature">
+                        <img src="images/tree.jpg" alt="ক্যাম্পাসের সুশীতল বৃক্ষরাজি" loading="lazy">
+                        <div class="gallery-overlay-badge">ক্যাম্পাসের ছায়াঘেরা বৃক্ষসারী</div>
+                    </div>
+
+                    <!-- Greenery 2 -->
+                    <div class="gallery-grid-item" data-category="nature">
+                        <img src="images/tree1.jpg" alt="সবুজ প্রাঙ্গণ ও গাছপালা" loading="lazy">
+                        <div class="gallery-overlay-badge">সবুজ পরিবেশ ও প্রাকৃতিক আবহ</div>
+                    </div>
+
+                    <!-- Nature Rain -->
+                    <div class="gallery-grid-item" data-category="nature">
+                        <img src="images/bisty.jpg" alt="বৃষ্টিস্নাত ক্যাম্পাস মাঠ" loading="lazy">
+                        <div class="gallery-overlay-badge">বৃষ্টিভেজা মনোরম ক্যাম্পাস দৃশ্য</div>
+                    </div>
+
+                    <!-- Tour -->
+                    <div class="gallery-grid-item" data-category="events">
+                        <img src="images/tour.jpg" alt="শিক্ষার্থী ও শিক্ষকদের বার্ষিক শিক্ষা সফর" loading="lazy">
+                        <div class="gallery-overlay-badge">বার্ষিক শিক্ষামূলক ভ্রমণ ও সফর</div>
+                    </div>
+
+                    <!-- Humanitarian Relief -->
+                    <div class="gallery-grid-item" data-category="events">
+                        <img src="images/help.jpg" alt="মানবিক ত্রাণ ও ফান্ড সংগ্রহ কর্মসূচি" loading="lazy">
+                        <div class="gallery-overlay-badge">শিক্ষার্থীদের সমাজসেবা ও ত্রাণ তহবিল</div>
+                    </div>
+
+                    <!-- Students -->
+                    <div class="gallery-grid-item" data-category="events">
+                        <img src="images/STUDENT.jpg" alt="শিক্ষার্থীদের উচ্ছ্বসিত মুহূর্ত" loading="lazy">
+                        <div class="gallery-overlay-badge">শিক্ষার্থীদের ক্যাম্পাসের বন্ধুত্ব ও উচ্ছ্বাস</div>
+                    </div>
+                </div>
+
+                <!-- Feature Stories Linking -->
+                <div style="margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                    <div class="facility-card" style="padding: 24px;">
+                        <h3 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">
+                            <i class="fas fa-futbol" style="color: var(--color-accent); margin-right: 8px;"></i> ক্রীড়া ও ফুটবল চর্চা
+                        </h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 15px;">
+                            ফুটবল নুরুল আমিন ডিগ্রি কলেজের অন্যতম প্রাণবন্ত ক্রীড়া উৎসব। শিক্ষক ও শিক্ষার্থীদের মাঠে উপস্থিতির বিস্তারিত প্রতিবেদন পড়ুন।
+                        </p>
+                        <a href="play.html" class="notice-action-btn">ক্রীড়া বিবরণী পড়ুন <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="facility-card" style="padding: 24px;">
+                        <h3 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">
+                            <i class="fas fa-bus" style="color: var(--color-accent); margin-right: 8px;"></i> বার্ষিক শিক্ষা সফর
+                        </h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 15px;">
+                            শিক্ষার্থীদের বাস্তব জগতের অভিজ্ঞতা ও সৌহার্দ্য বৃদ্ধির জন্য প্রতি বছর আয়োজিত শিক্ষা সফরের বিস্তারিত অনুভূতি জানুন।
+                        </p>
+                        <a href="tour.html" class="notice-action-btn">শিক্ষা সফরের গল্প <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="facility-card" style="padding: 24px;">
+                        <h3 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 8px;">
+                            <i class="fas fa-hand-holding-heart" style="color: var(--color-accent); margin-right: 8px;"></i> মানবিক সহায়তা উদ্যোগ
+                        </h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 15px;">
+                            অসহায় মানুষের পাশে দাঁড়াতে কলেজের শিক্ষক ও শিক্ষার্থীদের যৌথ সামাজিক ও মানবিক তহবিল সংগ্রহের বিস্তারিত পড়ুন।
+                        </p>
+                        <a href="donation.html" class="notice-action-btn">মানবসেবা কার্যক্রম <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>নুরুল আমিন ডিগ্রি কলেজ</h3>
+                    <p style="color: var(--color-accent); font-size: 0.95rem; margin-bottom: 10px;">Nurul Amin Degree College</p>
+                    <p class="footer-desc" data-i18n="footer_desc">
+                        ঢাকা শিক্ষা বোর্ড ও জাতীয় বিশ্ববিদ্যালয়ের অধিভুক্ত একটি এমপিওভুক্ত ডিগ্রি কলেজ। শিবচর, মাদারীপুরের শিক্ষার্থীদের উচ্চশিক্ষায় শিক্ষিত করে গড়ে তুলতে আমরা নিবেদিতপ্রাণ।
+                    </p>
+                    <div>
+                        <span class="footer-meta-pill">EIIN: 110882</span>
+                        <span class="footer-meta-pill">NU Code: 6309</span>
+                        <span class="footer-meta-pill">MPO: 3504013201</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_links">গুরুত্বপূর্ণ লিংক</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="nav_about">কলেজ পরিচিতি</a></li>
+                        <li><a href="academics.html" data-i18n="nav_academics">শিক্ষা কার্যক্রম ও বিষয়সমূহ</a></li>
+                        <li><a href="admission.html" data-i18n="nav_admission">ভর্তি নির্দেশিকা</a></li>
+                        <li><a href="student-services.html" data-i18n="nav_student_services">শিক্ষার্থী সেবা</a></li>
+                        <li><a href="notice.html" data-i18n="nav_notices">নোটিশ বোর্ড</a></li>
+                        <li><a href="routine.html" data-i18n="nav_routine">পরীক্ষার রুটিন</a></li>
+                        <li><a href="gallery.html" data-i18n="nav_gallery">ক্যাম্পাস ফটোগ্যালারি</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">যোগাযোগ ও লোকেশন</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_authorities">সরকারি শিক্ষা পোর্টাল</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://www.shed.gov.bd/" target="_blank" rel="noopener noreferrer">মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ</a></li>
+                        <li><a href="https://dhakaeducationboard.gov.bd/" target="_blank" rel="noopener noreferrer">ঢাকা শিক্ষা বোর্ড</a></li>
+                        <li><a href="http://www.nu.ac.bd/" target="_blank" rel="noopener noreferrer">জাতীয় বিশ্ববিদ্যালয়</a></li>
+                        <li><a href="http://www.xiclassadmission.gov.bd/" target="_blank" rel="noopener noreferrer">একাদশ শ্রেণিতে ভর্তি পোর্টাল</a></li>
+                        <li><a href="http://www.banbeis.gov.bd/" target="_blank" rel="noopener noreferrer">ব্যানবেইস (BANBEIS)</a></li>
+                        <li><a href="http://shibchar.madaripur.gov.bd/" target="_blank" rel="noopener noreferrer">শিবচর উপজেলা পোর্টাল</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_address_title">ক্যাম্পাসের ঠিকানা</h4>
+                    <address style="font-style: normal; font-size: 0.9rem; line-height: 1.6; color: #94a3b8;">
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-right: 6px;"></i> <span data-i18n="footer_address">উমেদপুর, শিবচর, মাদারীপুর - ৭৯৩৩</span></p>
+                        <p style="margin-top: 8px;"><i class="fas fa-building" style="color: var(--color-accent); margin-right: 6px;"></i> <span data-i18n="footer_admin_building">প্রশাসনিক ভবন, কলেজ ক্যাম্পাস</span></p>
+                        <p style="margin-top: 8px;"><i class="fas fa-clock" style="color: var(--color-accent); margin-right: 6px;"></i> <span data-i18n="footer_office_hours">রবিবার - বৃহস্পতিবার (সকাল ৯টা - বিকাল ৪টা)</span></p>
+                        <p style="margin-top: 10px; font-size: 0.8rem; color: #cbd5e1;">
+                            <a href="contact.html" style="color: var(--color-accent); text-decoration: underline;"><i class="fas fa-arrow-right"></i> যোগাযোগ ও তথ্য যাচাইকরণ</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <div data-i18n="footer_copyright">
+                    © ২০২৬ নুরুল আমিন ডিগ্রি কলেজ, শিবচর, মাদারীপুর। সর্বস্বত্ব সংরক্ষিত।
+                </div>
+                <div class="footer-credit">
+                    <span data-i18n="footer_credit_label">মূল ডেমো উদ্যোগ ও ডেভেলপমেন্ট:</span> 
+                    <a href="developer.html">আহমেদ ইমরান (এইচএসসি ব্যাচ ২০২৫)</a>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
 
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function filterGallery(category) {
+            const btns = document.querySelectorAll('.gallery-filter-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-grid-item');
+            items.forEach(item => {
+                const itemCat = item.getAttribute('data-category');
+                if (category === 'all' || itemCat === category) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
 </html>
