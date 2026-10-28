@@ -1,6 +1,17 @@
 # Dependencies
 node_modules/
 
+# Next.js build output
+.next/
+out/
+*.tsbuildinfo
+
+# Environment files & Local Database
+.env
+.env*.local
+*.db
+*.db-journal
+
 # Test artifacts & screenshots
 test/screenshots/
 *.log

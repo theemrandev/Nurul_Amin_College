@@ -1,0 +1,103 @@
+// Prisma Schema for Nurul Amin Degree College Portal
+// Local development uses SQLite; Production uses PostgreSQL via DATABASE_URL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  MAIN_ADMIN
+  ASSISTANT_ADMIN
+}
+
+model User {
+  id           String    @id @default(uuid())
+  name         String
+  username     String    @unique
+  email        String?   @unique
+  passwordHash String
+  role         String    @default("ASSISTANT_ADMIN")
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  students     Student[]
+  teachers     Teacher[]
+
+  @@map("users")
+}
+
+model Student {
+  id                   String   @id @default(uuid())
+  name                 String
+  studentClass         String
+  roll                 String
+  group                String
+  section              String   @default("A")
+  personalPhone        String?
+  personalEmail        String?
+  guardianName         String
+  guardianRelationship String   // "Father" | "Mother"
+  guardianPhone        String?
+  guardianEmail        String?
+  homeAddress          String
+  createdById          String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  createdBy            User     @relation(fields: [createdById], references: [id], onDelete: Restrict)
+
+  @@unique([studentClass, group, section, roll], name: "class_group_section_roll_unique")
+  @@index([createdById])
+  @@index([studentClass, group, section])
+  @@map("students")
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  actorId   String?
+  actorName String
+  actorRole String
+  action    String
+  targetId  String?
+  details   String?
+  ipAddress String?
+  outcome   String
+  createdAt DateTime @default(now())
+
+  @@index([action])
+  @@index([actorId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
+
+model Teacher {
+  id            String   @id @default(uuid())
+  nameBn        String
+  nameEn        String
+  designationBn String
+  designationEn String
+  departmentBn  String?
+  departmentEn  String?
+  rank          String   @default("lecturer") // "vice-principal" | "assistant-professor" | "lecturer" | "staff" | "other"
+  email         String?
+  phone         String?
+  photoUrl      String?
+  specialNote   String?
+  createdById   String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  createdBy     User     @relation(fields: [createdById], references: [id], onDelete: Restrict)
+
+  @@index([createdById])
+  @@index([rank])
+  @@index([departmentEn])
+  @@index([email])
+  @@map("teachers")
+}
+

@@ -3,8 +3,42 @@
   "version": "2.0.0",
   "description": "Official website portal of Nurul Amin Degree College (নুরুল আমিন ডিগ্রি কলেজ), Shibchar, Madaripur. EIIN: 110882.",
   "scripts": {
-    "start": "node test/server.js",
-    "test": "node test/validate.js"
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start",
+    "lint": "node ./node_modules/eslint/bin/eslint.js .",
+    "type-check": "node ./node_modules/typescript/bin/tsc --noEmit",
+    "prisma": "node ./node_modules/prisma/build/index.js",
+    "db:migrate": "node ./node_modules/prisma/build/index.js migrate dev",
+    "db:generate": "node ./node_modules/prisma/build/index.js generate",
+    "provision:admin": "node scripts/provision_admin.js",
+    "start:legacy": "node test/server.js",
+    "test:legacy": "node test/validate.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.0",
+    "bcryptjs": "^3.0.3",
+    "clsx": "2.1.1",
+    "jose": "^6.2.13",
+    "lucide-react": "0.453.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "swiper": "14.3.0",
+    "tailwind-merge": "2.5.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "22.7.5",
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "postcss": "8.5.32",
+    "prisma": "^6.4.0",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.6.3"
   },
   "keywords": [
     "nurul-amin-degree-college",
