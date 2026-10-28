@@ -1,18 +1,14 @@
 // Prisma Schema for Nurul Amin Degree College Portal
-// Local development uses SQLite; Production uses PostgreSQL via DATABASE_URL
+// Production Database: Neon PostgreSQL via DATABASE_URL (Pooled) & DIRECT_URL (Direct)
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
-}
-
-enum Role {
-  MAIN_ADMIN
-  ASSISTANT_ADMIN
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model User {
@@ -100,4 +96,3 @@ model Teacher {
   @@index([email])
   @@map("teachers")
 }
-
