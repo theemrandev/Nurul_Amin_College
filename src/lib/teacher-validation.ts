@@ -39,7 +39,29 @@ export interface TeacherValidationResult {
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const PHONE_REGEX = /^(\+?880|0)?1[3-9]\d{8}$|^(\+?[0-9]{10,15})$/;
-const SAFE_PHOTO_REGEX = /^(\/images\/[a-zA-Z0-9_\-\/.]+\.(jpg|jpeg|png|webp)|https?:\/\/[a-zA-Z0-9_\-./]+\.(jpg|jpeg|png|webp))$/i;
+
+/**
+ * Strict image path/URL validation:
+ * - Prevents path traversal ('..', backslashes, percent-encoded dots)
+ * - Only permits safe image extensions (jpg, jpeg, png, webp, avif, svg)
+ * - Prohibits executable extensions or dangerous URI schemes (javascript:, data:, file:)
+ * - Relative paths must start with '/images/' and contain valid segments
+ * - Absolute URLs must use HTTPS (or HTTP localhost in development)
+ */
+function isSafePhotoPathOrUrl(val: string): boolean {
+  if (val.includes('..') || val.includes('\\') || val.includes('%2e') || val.includes('%2E')) {
+    return false;
+  }
+  const relativePhotoRegex = /^\/images\/[a-zA-Z0-9_./-]+\.(jpg|jpeg|png|webp|avif|svg)$/i;
+  const httpsPhotoRegex = /^https:\/\/[a-zA-Z0-9_.-]+(?::[0-9]+)?(?:\/[a-zA-Z0-9_./-]*)?\.(jpg|jpeg|png|webp|avif|svg)(?:\?[a-zA-Z0-9_.~%&=+-]*)?$/i;
+  const devPhotoRegex = /^http:\/\/localhost(?::[0-9]+)?(?:\/[a-zA-Z0-9_./-]*)?\.(jpg|jpeg|png|webp|avif|svg)$/i;
+
+  return (
+    relativePhotoRegex.test(val) ||
+    httpsPhotoRegex.test(val) ||
+    (process.env.NODE_ENV !== 'production' && devPhotoRegex.test(val))
+  );
+}
 
 export const ALLOWED_RANKS = [
   'vice-principal',
@@ -143,8 +165,8 @@ export function validateTeacherInput(input: unknown): TeacherValidationResult {
     if (trimmedPhoto.length > 0) {
       if (trimmedPhoto.length > 255) {
         errors.photoUrl = 'ছবির পাথ বা URL ২৫৫ অক্ষরের বেশি হতে পারবে না / Photo path cannot exceed 255 characters.';
-      } else if (!SAFE_PHOTO_REGEX.test(trimmedPhoto) && !trimmedPhoto.startsWith('/')) {
-        errors.photoUrl = 'ছবির পাথ সঠিক নয় (যেমন: /images/teachers/faculty.jpg) / Photo path must be a valid relative or image URL.';
+      } else if (!isSafePhotoPathOrUrl(trimmedPhoto)) {
+        errors.photoUrl = 'ছবির পাথ সঠিক নয় (যেমন: /images/teachers/faculty.jpg) / Photo path must be a valid safe image path or HTTPS image URL.';
       } else {
         photoUrl = trimmedPhoto;
       }

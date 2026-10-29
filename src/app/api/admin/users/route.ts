@@ -130,9 +130,9 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true, user: newUser }, { status: 201 });
   } catch (err: unknown) {
-    const errorMsg = err instanceof Error ? err.message : 'Internal Server Error';
+    console.error('[API /api/admin/users POST] Error:', err);
     return NextResponse.json(
-      { error: 'Failed to create administrator account: ' + errorMsg },
+      { error: 'Failed to create administrator account due to an unexpected server error.' },
       { status: 500 }
     );
   }

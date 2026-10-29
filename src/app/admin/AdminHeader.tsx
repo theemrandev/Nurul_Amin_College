@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { LogOut, ShieldCheck, ArrowLeft, UserCircle } from 'lucide-react';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
-import { SessionUser } from '@/lib/auth';
+import type { SessionUser } from '@/lib/auth';
 
 interface AdminHeaderProps {
   user: SessionUser;

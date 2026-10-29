@@ -8,7 +8,8 @@ out/
 
 # Environment files & Local Database
 .env
-.env*.local
+.env.*
+!.env.example
 *.db
 *.db-journal
 

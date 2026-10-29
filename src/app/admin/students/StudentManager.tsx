@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
-import { SessionUser } from '@/lib/auth';
+import type { SessionUser } from '@/lib/auth';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import {

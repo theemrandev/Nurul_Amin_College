@@ -108,8 +108,8 @@ export async function PUT(req: NextRequest, context: RouteContext) {
 
     return NextResponse.json({ success: true, user: updated });
   } catch (err: unknown) {
-    const errorMsg = err instanceof Error ? err.message : 'Internal Server Error';
-    return NextResponse.json({ error: 'Failed to update administrator: ' + errorMsg }, { status: 500 });
+    console.error('[API /api/admin/users/[id] PUT] Error:', err);
+    return NextResponse.json({ error: 'Failed to update administrator due to an unexpected server error.' }, { status: 500 });
   }
 }
 
@@ -262,8 +262,8 @@ export async function DELETE(req: NextRequest, context: RouteContext) {
         reassignedCount: totalRecords,
       });
     } catch (err: unknown) {
-      const errorMsg = err instanceof Error ? err.message : 'Internal Server Error';
-      return NextResponse.json({ error: 'Failed to reassign and delete administrator: ' + errorMsg }, { status: 500 });
+      console.error('[API /api/admin/users/[id] DELETE reassign] Error:', err);
+      return NextResponse.json({ error: 'Failed to reassign and delete administrator due to an unexpected server error.' }, { status: 500 });
     }
   }
 
@@ -285,7 +285,7 @@ export async function DELETE(req: NextRequest, context: RouteContext) {
 
     return NextResponse.json({ success: true, message: 'Administrator account removed successfully.' });
   } catch (err: unknown) {
-    const errorMsg = err instanceof Error ? err.message : 'Internal Server Error';
-    return NextResponse.json({ error: 'Failed to delete administrator: ' + errorMsg }, { status: 500 });
+    console.error('[API /api/admin/users/[id] DELETE] Error:', err);
+    return NextResponse.json({ error: 'Failed to delete administrator due to an unexpected server error.' }, { status: 500 });
   }
 }
