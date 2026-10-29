@@ -27,10 +27,13 @@ export interface SessionUser {
 export const SESSION_COOKIE_NAME = 'nadc_admin_session';
 const SESSION_DURATION_SECONDS = 8 * 60 * 60; // 8 hours
 
-function getSecretKey(): Uint8Array {
-  const secret = process.env.SESSION_SECRET || 'nadc-default-dev-secret-change-in-prod-at-least-32-chars';
-  return new TextEncoder().encode(secret);
-}
+export {
+  MIN_SESSION_SECRET_LENGTH,
+  DEV_FALLBACK_SECRET,
+  getValidatedSessionSecret,
+  getSecretKey,
+} from './session-secret';
+import { getSecretKey } from './session-secret';
 
 // =============================================================================
 // Password Hashing & Verification
@@ -105,8 +108,8 @@ export async function createSessionToken(payload: SessionPayload): Promise<strin
 }
 
 export async function verifySessionToken(token: string): Promise<SessionPayload | null> {
+  const secretKey = getSecretKey();
   try {
-    const secretKey = getSecretKey();
     const { payload } = await jwtVerify(token, secretKey);
     return payload as unknown as SessionPayload;
   } catch {
@@ -152,7 +155,10 @@ export async function getSession(): Promise<SessionUser | null> {
       role: user.role as AdminRole,
       isActive: user.isActive,
     };
-  } catch {
+  } catch (err: unknown) {
+    if (err instanceof Error && err.message.startsWith('CRITICAL SECURITY CONFIGURATION ERROR')) {
+      console.error('[AUTH getSession] Configuration Error:', err.message);
+    }
     return null;
   }
 }
