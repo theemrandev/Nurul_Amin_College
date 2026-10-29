@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /admin.html
+Disallow: /api/
 Disallow: /test/
 Disallow: /scripts/
 Disallow: /data/
 
-Sitemap: https://nurulamindegreecollege.edu.bd/sitemap.xml
+Sitemap: https://nurul-amin-college.vercel.app/sitemap.xml

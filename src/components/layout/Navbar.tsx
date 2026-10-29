@@ -24,34 +24,34 @@ export function Navbar({ onOpenMobileNav }: NavbarProps) {
       className="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--bg-surface-elevated)]/95 backdrop-blur-md border-b border-[var(--border-subtle)] shadow-sm transition-colors"
       role="banner"
     >
-      <div className="max-w-[1440px] mx-auto px-2 xs:px-4 sm:px-6 lg:px-5 xl:px-8">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-5 xl:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20 gap-2 sm:gap-3 lg:gap-4">
           {/* ================================================================= */}
           {/* LEFT: Logo & Bilingual College Identity                           */}
           {/* ================================================================= */}
           <Link
             href="/"
-            className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] rounded-lg p-0.5 flex-shrink-0"
+            className="flex items-center gap-2 sm:gap-2.5 lg:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] rounded-lg p-0.5 min-w-0"
             aria-label="Nurul Amin Degree College Home"
           >
             {/* Authentic College Logo from Project Assets */}
-            <div className="relative w-9 h-9 xs:w-10 xs:h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 flex-shrink-0">
+            <div className="relative w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex-shrink-0">
               <Image
                 src="/images/logo (4).png"
                 alt="নুরুল আমিন ডিগ্রি কলেজ লোগো / Nurul Amin Degree College Logo"
                 fill
-                sizes="(max-width: 640px) 40px, (max-width: 1024px) 44px, 48px"
+                sizes="(max-width: 640px) 36px, (max-width: 1024px) 44px, 48px"
                 priority
                 className="object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
               />
             </div>
 
             {/* Bilingual College Names (Bengali first, English directly underneath) */}
-            <div className="flex flex-col justify-center flex-shrink-0 min-w-0 sm:min-w-fit">
-              <span className="text-xs xs:text-sm sm:text-base lg:text-base xl:text-lg font-bold tracking-tight text-[var(--color-primary)] dark:text-[var(--color-primary-light)] leading-tight whitespace-nowrap">
+            <div className="flex flex-col justify-center min-w-0">
+              <span className="text-xs sm:text-base lg:text-base xl:text-lg font-bold tracking-tight text-[var(--color-primary)] dark:text-[var(--color-primary-light)] leading-tight truncate">
                 নুরুল আমিন ডিগ্রি কলেজ
               </span>
-              <span className="text-[10px] xs:text-[11px] sm:text-xs lg:text-xs font-semibold text-[var(--text-secondary)] leading-tight whitespace-nowrap mt-0.5">
+              <span className="text-[10px] sm:text-xs font-semibold text-[var(--text-secondary)] leading-tight truncate mt-0.5">
                 Nurul Amin Degree College
               </span>
             </div>
@@ -125,16 +125,16 @@ export function Navbar({ onOpenMobileNav }: NavbarProps) {
           {/* ================================================================= */}
           {/* RIGHT (Mobile < lg): Single Row with Language, Theme & Drawer     */}
           {/* ================================================================= */}
-          <div className="flex lg:hidden items-center gap-1 xs:gap-1.5 flex-shrink-0">
-            <LanguageSwitcher size="sm" />
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 flex-shrink-0">
+            <LanguageSwitcher size="sm" variant="compact" />
             <ThemeToggle size="sm" />
             <button
               type="button"
               onClick={onOpenMobileNav}
-              className="inline-flex items-center justify-center p-2 rounded-lg border border-[var(--border-strong)] bg-[var(--bg-muted)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--color-primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] min-h-[38px] min-w-[38px] xs:min-h-[44px] xs:min-w-[44px]"
+              className="inline-flex items-center justify-center p-2 rounded-lg border border-[var(--border-strong)] bg-[var(--bg-muted)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--color-primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] min-h-[36px] min-w-[36px]"
               aria-label={t('a11y_open_menu')}
             >
-              <Menu className="w-5 h-5 xs:w-5.5 xs:h-5.5" aria-hidden="true" />
+              <Menu className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>

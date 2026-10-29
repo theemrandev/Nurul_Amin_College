@@ -66,7 +66,8 @@ export function AdminHeader({ user }: AdminHeaderProps) {
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>{isMainAdmin ? 'Main Admin (মেইন অ্যাডমিন)' : 'Assistant Admin (সহকারী)'}</span>
+              <span className="hidden sm:inline">{isMainAdmin ? 'Main Admin (মেইন অ্যাডমিন)' : 'Assistant Admin (সহকারী)'}</span>
+              <span className="sm:hidden">{isMainAdmin ? 'Admin' : 'Asst.'}</span>
             </span>
 
             {/* User Name */}
@@ -97,7 +98,8 @@ export function AdminHeader({ user }: AdminHeaderProps) {
               aria-label="Logout from Admin Portal"
             >
               <LogOut className="w-3.5 h-3.5" />
-              <span>লগআউট / Logout</span>
+              <span className="hidden sm:inline">লগআউট / Logout</span>
+              <span className="sm:hidden">লগআউট</span>
             </button>
           </div>
         </div>

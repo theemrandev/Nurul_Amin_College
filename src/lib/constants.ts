@@ -52,9 +52,15 @@ export const COLLEGE_INFO = {
     degreeCourses: ['B.A.', 'B.S.S.', 'B.B.S.', 'B.Sc.']
   },
   developer: {
-    creditEn: 'Md Emran Chokder — The Emran Dev',
-    creditBn: 'মোঃ এমরান চোকদার — দ্য এমরান দেব',
-    role: 'Lead Full-Stack Web Architect & Maintainer'
+    brand: 'The Emran Dev',
+    name: 'Md Emran Chokder',
+    shortName: 'Emran',
+    creditEn: 'The Emran Dev (Md Emran Chokder)',
+    creditBn: 'দ্য এমরান দেব (মোঃ এমরান চোকদার)',
+    role: 'Website Developer & Maintainer',
+    github: 'https://github.com/theemrandev',
+    repo: 'https://github.com/theemrandev/Nurul_Amin_College',
+    linkedin: 'https://linkedin.com/in/theemrandev',
   }
 } as const;
 

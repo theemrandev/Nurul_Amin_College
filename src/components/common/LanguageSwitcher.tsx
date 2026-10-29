@@ -21,7 +21,7 @@ export function LanguageSwitcher({
       <button
         type="button"
         onClick={() => setLang(lang === 'bn' ? 'en' : 'bn')}
-        className={`inline-flex items-center gap-1 px-2 py-1 rounded-md border border-[var(--border-strong)] bg-[var(--bg-muted)] hover:bg-[var(--bg-surface)] text-xs transition-colors min-h-[34px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] select-none ${className}`}
+        className={`inline-flex items-center gap-1 px-2 py-1 rounded-md border border-[var(--border-strong)] bg-[var(--bg-muted)] hover:bg-[var(--bg-surface)] text-xs transition-colors min-h-[36px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)] select-none ${className}`}
         aria-label={lang === 'bn' ? 'Switch to English' : 'বাংলায় দেখুন'}
         title={lang === 'bn' ? 'Switch to English' : 'বাংলায় দেখুন'}
       >

@@ -25,7 +25,7 @@ export function Footer() {
               <div className="relative w-12 h-12 flex-shrink-0 bg-white/10 rounded-lg p-1">
                 <Image
                   src="/images/logo (4).png"
-                  alt="কলেজ প্রতীক"
+                  alt={isBn ? 'নুরুল আমিন ডিগ্রি কলেজ প্রতীক' : 'Nurul Amin Degree College Logo'}
                   fill
                   sizes="48px"
                   className="object-contain"
@@ -208,11 +208,22 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {isBn ? COLLEGE_INFO.name.bn : COLLEGE_INFO.name.en}. {t('footer_copyright')}.
           </p>
 
-          <p className="text-center sm:text-right text-[11px]">
-            {t('footer_dev_credit')}{' '}
+          <p className="text-center sm:text-right text-[11px] flex flex-wrap items-center justify-center sm:justify-end gap-1.5">
+            <span>{t('footer_dev_credit')}</span>
             <Link href="/credits" className="font-semibold text-slate-200 hover:text-amber-300 transition-colors">
               {isBn ? COLLEGE_INFO.developer.creditBn : COLLEGE_INFO.developer.creditEn}
             </Link>
+            <span className="text-slate-600 hidden sm:inline" aria-hidden="true">•</span>
+            <a
+              href={COLLEGE_INFO.developer.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-amber-300 transition-colors inline-flex items-center gap-0.5"
+              aria-label="The Emran Dev GitHub Profile"
+            >
+              <span>GitHub</span>
+              <ExternalLink className="w-2.5 h-2.5 opacity-60" aria-hidden="true" />
+            </a>
           </p>
         </div>
       </div>

@@ -17,6 +17,7 @@ interface MobileNavProps {
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const { t, lang } = useLanguage();
+  const isBn = lang === 'bn';
   const drawerRef = useRef<HTMLDivElement>(null);
   const previouslyFocusedRef = useRef<HTMLElement | null>(null);
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
@@ -109,7 +110,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             <div className="relative w-10 h-10 flex-shrink-0">
               <Image
                 src="/images/logo (4).png"
-                alt="কলেজ প্রতীক"
+                alt={isBn ? 'নুরুল আমিন ডিগ্রি কলেজ প্রতীক' : 'Nurul Amin Degree College Logo'}
                 fill
                 sizes="40px"
                 className="object-contain"

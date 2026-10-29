@@ -15,7 +15,7 @@ export function ThemeToggle({ className = '', size = 'sm' }: ThemeToggleProps) {
   const { t } = useLanguage();
 
   const isSmall = size === 'sm';
-  const buttonDimensions = isSmall ? 'h-8 w-8 min-h-[32px] min-w-[32px]' : 'h-11 w-11 min-h-[44px] min-w-[44px]';
+  const buttonDimensions = isSmall ? 'h-9 w-9 min-h-[36px] min-w-[36px]' : 'h-11 w-11 min-h-[44px] min-w-[44px]';
 
   // Placeholder while mounting to avoid hydration mismatch
   if (!isMounted) {
